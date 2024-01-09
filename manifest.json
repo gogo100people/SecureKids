@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Secure Kids",
+    "description": "Helps kids to stay safe online",
+    "version": "1.0",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.*/*"
+            ],
+            "js": ["inject.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    }
+  }
